@@ -4,20 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:visibility="visible"
     tools:context=".MainActivity">
 
 
     <TextView
         android:id="@+id/flashcard_question"
         android:layout_width="match_parent"
-        android:layout_height="230dp"
+        android:layout_height="223dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
         android:background="@drawable/solid_color_shape"
-        android:elevation="5dp"
+        android:elevation="2dp"
+        android:fontFamily="casual"
         android:gravity="center_vertical"
         android:text="Who is Ethiopia's current prime minister?"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="40sp"
+        android:textSize="36sp"
         android:typeface="normal"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="42dp" />
@@ -25,16 +31,21 @@
     <TextView
         android:id="@+id/flashcard_answer"
         android:layout_width="match_parent"
-        android:layout_height="222dp"
+        android:layout_height="223dp"
+        android:layout_alignBottom="@+id/flashcard_question"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
         android:background="@drawable/color_shape_answer"
+        android:elevation="2dp"
+        android:fontFamily="cursive"
         android:gravity="center_vertical"
         android:text="Dr. Abiy Ahmed"
         android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="40sp"
+        android:textColor="@color/darkBlue"
+        android:textSize="36sp"
         android:visibility="invisible"
         tools:layout_editor_absoluteX="52dp"
         tools:layout_editor_absoluteY="228dp" />
@@ -43,23 +54,29 @@
         android:id="@+id/option_one"
         android:layout_width="235dp"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/option_two"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="162dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="164dp"
+        android:background="@drawable/forbuttons"
+        android:fontFamily="casual"
         android:text="Dr. Abiy Ahmed"
         android:textAlignment="center"
-        android:textSize="30sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/option_two"
         android:layout_width="235dp"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/option_three"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="114dp"
+        android:layout_marginStart="-2dp"
+        android:layout_marginBottom="130dp"
+        android:background="@drawable/forbuttons"
+        android:fontFamily="casual"
         android:text="Haile Selassie"
         android:textAlignment="center"
-        android:textSize="30sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/option_three"
@@ -67,8 +84,35 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="66dp"
+        android:layout_marginBottom="97dp"
+        android:background="@drawable/forbuttons"
+        android:fontFamily="casual"
         android:text="Meles Zenawi"
         android:textAlignment="center"
-        android:textSize="30sp" />
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/hide_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="153dp"
+        android:layout_marginBottom="0dp"
+        android:adjustViewBounds="false"
+        android:src="@drawable/hideicon"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/show_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="154dp"
+        android:layout_marginBottom="0dp"
+        android:adjustViewBounds="false"
+        android:src="@drawable/ic_iconmonstr_eye_5"
+        android:visibility="visible" />
+
 </android.widget.RelativeLayout>

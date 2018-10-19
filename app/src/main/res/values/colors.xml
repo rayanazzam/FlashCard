@@ -6,6 +6,7 @@
     <color name="Orange">#FF6600</color>
     <color name="Red">#FF0000</color>
     <color name="colorLightBlue">#33CCCC</color>
-    <color name="white">#ffffff</color>
+    <color name="white">#ffffd0</color>
+    <color name="darkBlue">#334cff</color>
 
 </resources>
