@@ -30,7 +30,7 @@ Flash card app that displays a question and reveals answer upon tapping screen
 ### App Walk-though
 
 
-<img src="https://imgur.com/a/SoisOMu.gif" width=200><br>
+<img src="https://i.imgur.com/NFOPArZ.gif" width=200><br>
 
 
 
