@@ -25,8 +25,8 @@ Flash card app that displays a question and reveals answer upon tapping screen
 ## Lab 2
 
 ### App Description
-`TODO://` Add app description
-
+-Flash Card app that enalbes users to input their own question and set of multiple choice answers.
+-Added Features like displaying a toast error message when user does not input anything
 ### App Walk-though
 
 
