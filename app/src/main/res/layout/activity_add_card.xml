@@ -18,17 +18,7 @@
         android:src="@drawable/ic_cancelicon"
         android:visibility="visible" />
 
-    <EditText
-        android:id="@+id/answer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/question"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="-2dp"
-        android:layout_marginTop="203dp"
-        android:ems="10"
-        android:inputType="textMultiLine"
-        android:text="Enter answer here" />
+
 
     <ImageView
         android:id="@+id/saveIcon"
@@ -55,16 +45,42 @@
         android:text="Enter question here" />
 
     <EditText
-        android:id="@+id/hint"
+        android:id="@+id/answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/question"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="203dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="Enter answer here" />
+
+    <EditText
+        android:id="@+id/wanswer1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="80dp"
-        android:layout_marginBottom="110dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginBottom="230dp"
         android:ems="10"
-        android:hint="Enter hint here"
-        android:inputType="textPersonName" />
+        android:hint="Enter Another wrong Answer Option Here"
+        android:inputType="textMultiLine" />
+
+    <EditText
+        android:id="@+id/wanswer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="86dp"
+        android:layout_marginBottom="146dp"
+        android:ems="10"
+        android:hint="Enter Wrong Answer Option Here"
+        android:inputType="textMultiLine" />
+
+
 
 
 </android.widget.RelativeLayout>

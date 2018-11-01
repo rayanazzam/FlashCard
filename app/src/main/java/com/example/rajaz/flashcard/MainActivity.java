@@ -15,11 +15,14 @@ public class MainActivity extends AppCompatActivity {
         if(requestCode==100) {
             String question=data.getExtras().getString("stringQuestion");
             String answer=data.getExtras().getString("stringAnswer");
+            String wrongAnswer1=data.getExtras().getString("wrongAnswer1");
+            String wrongAnswer2=data.getExtras().getString("wrongAnswer2");
             ((TextView)findViewById(R.id.flashcard_question)).setText(question);
             ((TextView)findViewById(R.id.flashcard_answer)).setText(answer);
-            findViewById(R.id.option_one).setVisibility(View.INVISIBLE);
-            findViewById(R.id.option_two).setVisibility(View.INVISIBLE);
-            findViewById(R.id.option_three).setVisibility(View.INVISIBLE);
+            ((TextView)findViewById(R.id.option_one)).setText(answer);
+            ((TextView)findViewById(R.id.option_two)).setText(wrongAnswer1);
+            ((TextView)findViewById(R.id.option_three)).setText(wrongAnswer2);
+
         }
     }
 
@@ -44,8 +47,12 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent= new Intent(MainActivity.this,AddCardActivity.class);
                 String Question=((TextView)findViewById(R.id.flashcard_question)).getText().toString();
                 String Answer=((TextView)findViewById(R.id.flashcard_answer)).getText().toString();
+                String option1=((TextView)findViewById(R.id.option_two)).getText().toString();
+                String option2=((TextView)findViewById(R.id.option_three)).getText().toString();
                 intent.putExtra("oldQuestion",Question);
                 intent.putExtra("oldAnswer",Answer);
+                intent.putExtra("option1",option1);
+                intent.putExtra("option2",option2);
                 MainActivity.this.startActivityForResult(intent,100);
             }
         });
