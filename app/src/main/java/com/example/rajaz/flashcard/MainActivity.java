@@ -6,9 +6,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
-
+    FlashcardDatabase flashcardDatabase;
+    List<Flashcard> allFlashCards;
 
     @Override
     protected void onActivityResult(int requestCode,int resultCode, Intent data) {
@@ -23,12 +26,30 @@ public class MainActivity extends AppCompatActivity {
             ((TextView)findViewById(R.id.option_two)).setText(wrongAnswer1);
             ((TextView)findViewById(R.id.option_three)).setText(wrongAnswer2);
 
-        }
+            //Insert data into database after instantiating a fcDb
+            flashcardDatabase.insertCard(new Flashcard(question,answer,wrongAnswer1,wrongAnswer2));
+            }
+        allFlashCards=flashcardDatabase.getAllCards();
     }
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        /*Initialize flashcardDb
+        Guaranteed it gets initialized here
+         */
+        flashcardDatabase=new FlashcardDatabase(this);
+
+        allFlashCards=flashcardDatabase.getAllCards();
+
+        if(allFlashCards!=null && allFlashCards.size()>0) {
+            ((TextView)findViewById(R.id.flashcard_question)).setText(allFlashCards.get(0).getQuestion());
+            ((TextView)findViewById(R.id.flashcard_answer)).setText(allFlashCards.get(0).getAnswer());
+            ((TextView)findViewById(R.id.option_two)).setText(allFlashCards.get(0).getWrongAnswer1());
+            ((TextView)findViewById(R.id.option_three)).setText(allFlashCards.get(0).getWrongAnswer2());
+       }
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
