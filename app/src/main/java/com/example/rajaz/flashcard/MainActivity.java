@@ -35,6 +35,10 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
+
         /*Initialize flashcardDb
         Guaranteed it gets initialized here
          */
@@ -50,8 +54,6 @@ public class MainActivity extends AppCompatActivity {
        }
 
 
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
         findViewById(R.id.addIcon).setOnClickListener(new View.OnClickListener() {
             @Override

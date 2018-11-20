@@ -96,8 +96,8 @@
         android:layout_height="40dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="153dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginStart="135dp"
+        android:layout_marginBottom="33dp"
         android:adjustViewBounds="false"
         android:src="@drawable/hideicon"
         android:visibility="invisible" />
@@ -108,8 +108,8 @@
         android:layout_height="40dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="154dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginBottom="33dp"
         android:adjustViewBounds="false"
         android:src="@drawable/ic_iconmonstr_eye_5"
         android:visibility="visible" />
@@ -120,8 +120,8 @@
         android:layout_height="40dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="236dp"
-        android:layout_marginBottom="34dp"
+        android:layout_marginStart="253dp"
+        android:layout_marginBottom="36dp"
         android:adjustViewBounds="false"
         android:src="@drawable/ic_addicon"
         android:visibility="visible" />
@@ -132,7 +132,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="20dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="34dp"
         android:adjustViewBounds="false"
         android:src="@drawable/ic_editicon"
         android:visibility="visible" />

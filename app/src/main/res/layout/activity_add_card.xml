@@ -35,7 +35,7 @@
     <EditText
         android:id="@+id/question"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="62dp"
         android:layout_alignParentTop="true"
         android:layout_marginTop="63dp"
         android:layout_marginEnd="-300dp"
@@ -47,11 +47,11 @@
     <EditText
         android:id="@+id/answer"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="68dp"
         android:layout_alignStart="@+id/question"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="-2dp"
-        android:layout_marginTop="203dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="191dp"
         android:ems="10"
         android:inputType="textMultiLine"
         android:text="Enter answer here" />
@@ -62,8 +62,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="84dp"
-        android:layout_marginBottom="230dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginBottom="122dp"
         android:ems="10"
         android:hint="Enter Another wrong Answer Option Here"
         android:inputType="textMultiLine" />
@@ -75,7 +75,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="86dp"
-        android:layout_marginBottom="146dp"
+        android:layout_marginBottom="217dp"
         android:ems="10"
         android:hint="Enter Wrong Answer Option Here"
         android:inputType="textMultiLine" />
