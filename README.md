@@ -51,7 +51,6 @@ Flash card app that displays a question and reveals answer upon tapping screen
 ## Lab 3
 
 ### App Description
-`TODO://` Add app description
 
 ### App Walk-though
 
