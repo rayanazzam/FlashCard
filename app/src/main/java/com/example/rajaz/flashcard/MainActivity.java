@@ -12,7 +12,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     FlashcardDatabase flashcardDatabase;
     List<Flashcard> allFlashCards;
-
+    int idx=0;
     @Override
     protected void onActivityResult(int requestCode,int resultCode, Intent data) {
         if(requestCode==100) {
@@ -28,16 +28,17 @@ public class MainActivity extends AppCompatActivity {
 
             //Insert data into database after instantiating a fcDb
             flashcardDatabase.insertCard(new Flashcard(question,answer,wrongAnswer1,wrongAnswer2));
-            }
+        }
         allFlashCards=flashcardDatabase.getAllCards();
     }
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main);
 
         /*Initialize flashcardDb
         Guaranteed it gets initialized here
@@ -51,9 +52,21 @@ public class MainActivity extends AppCompatActivity {
             ((TextView)findViewById(R.id.flashcard_answer)).setText(allFlashCards.get(0).getAnswer());
             ((TextView)findViewById(R.id.option_two)).setText(allFlashCards.get(0).getWrongAnswer1());
             ((TextView)findViewById(R.id.option_three)).setText(allFlashCards.get(0).getWrongAnswer2());
-       }
+        }
 
-
+        findViewById(R.id.nextIcon).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                idx++;
+                if(idx>allFlashCards.size()-1) {
+                    idx=0;
+                }
+                ((TextView)findViewById(R.id.flashcard_question)).setText(allFlashCards.get(idx).getQuestion());
+                ((TextView)findViewById(R.id.flashcard_answer)).setText(allFlashCards.get(idx).getAnswer());
+                ((TextView)findViewById(R.id.option_two)).setText(allFlashCards.get(idx).getWrongAnswer1());
+                ((TextView)findViewById(R.id.option_three)).setText(allFlashCards.get(idx).getWrongAnswer2());
+            }
+        });
 
         findViewById(R.id.addIcon).setOnClickListener(new View.OnClickListener() {
             @Override
