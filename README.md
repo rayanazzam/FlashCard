@@ -56,9 +56,8 @@ Flash card app that displays a question and reveals answer upon tapping screen
 ### App Walk-though
 
 
-<img src="https://imgur.com/a/KPgYgdr.gif" width=200><br>
+<img src="https://imgur.com/a/o1klCFO" width=200><br>
 
-`TODO://` In the User stories section below, add an `x` between the `-[ ]` like this `- [x]` for any user story you complete. (☝️ Remove this paragraph after after checking off user stories)
 
 ## Required
 - [X] User can create a card and still see their created card when the app is relaunched.
